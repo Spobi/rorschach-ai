@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.static('.'));
 
 // Replace YOUR_API_KEY_HERE with your actual API key
-const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || 'placeholder-key';
+const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || 'Anthropic_API_Key';
 
 app.post('/analyze', async (req, res) => {
     try {
