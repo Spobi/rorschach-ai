@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RORSCHACH.AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RORSCHACH.AI</h1>
+        <div class="rorschach-container">
+            <canvas id="rorschach-canvas" width="640" height="360"></canvas>
+        </div>
+        <button id="generate-btn" class="icon-button"><i class="fas fa-sync-alt"></i></button>
+        <div class="interaction">
+            <textarea id="user-interpretation" placeholder="Tell me... what do you see?"></textarea>
+            <button id="submit-btn">Analyze me!</button>
+        </div>
+        <div id="result" class="hidden">
+            <h2>Interpretation</h2>
+            <p id="interpretation-text"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
