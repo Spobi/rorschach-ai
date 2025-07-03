@@ -1,3 +1,39 @@
+// NEW: Password protection code (add this at the TOP of your JavaScript file)
+const passwordScreen = document.getElementById('password-screen');
+const mainApp = document.getElementById('main-app');
+const passwordInput = document.getElementById('password-input');
+const passwordSubmit = document.getElementById('password-submit');
+const errorMessage = document.getElementById('error-message');
+
+const correctPassword = 'inkblot';
+
+function checkPassword() {
+    const enteredPassword = passwordInput.value;
+    if (enteredPassword === correctPassword) {
+        passwordScreen.classList.add('hidden');
+        mainApp.classList.remove('hidden');
+        generateInkblot(); // Generate first inkblot when password is correct
+    } else {
+        errorMessage.classList.remove('hidden');
+        passwordInput.value = '';
+        passwordInput.focus();
+    }
+}
+
+passwordSubmit.addEventListener('click', checkPassword);
+passwordInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        checkPassword();
+    }
+});
+
+// Focus on password input when page loads
+window.addEventListener('load', function() {
+    passwordInput.focus();
+});
+
+// KEEP ALL YOUR EXISTING CODE BELOW THIS LINE
+
 // Get elements from HTML
 const canvas = document.getElementById('rorschach-canvas');
 const ctx = canvas.getContext('2d');

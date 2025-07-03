@@ -8,7 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
+    <!-- NEW: Password Screen -->
+    <div id="password-screen" class="container password-screen">
+        <h1>RORSCHACH.AI</h1>
+        <p>Enter password:</p>
+        <input type="password" id="password-input" placeholder="Password">
+        <br>
+        <button id="password-submit">Enter</button>
+        <div id="error-message" class="error-message hidden">Incorrect password. Try again.</div>
+    </div>
+
+    <!-- MODIFIED: Main Rorschach Test (now hidden initially) -->
+    <div id="main-app" class="container hidden">
         <h1>RORSCHACH.AI</h1>
         <div class="rorschach-container">
             <canvas id="rorschach-canvas" width="640" height="360"></canvas>
