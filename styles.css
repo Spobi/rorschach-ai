@@ -104,6 +104,8 @@ textarea::placeholder {
 #interpretation-text {
     font-size: 18px;
     line-height: 1.5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 25; /* Ultra Light weight - this was missing! */
 }
 
 .hidden {
