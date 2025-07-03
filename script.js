@@ -43,6 +43,18 @@ const userInterpretation = document.getElementById('user-interpretation');
 const result = document.getElementById('result');
 const interpretationText = document.getElementById('interpretation-text');
 
+// NEW: Handle placeholder removal when clicking in text box
+userInterpretation.addEventListener('focus', function() {
+    this.placeholder = '';
+});
+
+userInterpretation.addEventListener('blur', function() {
+    // Only restore placeholder if the text box is empty
+    if (this.value.trim() === '') {
+        this.placeholder = 'Tell me... what do you see?';
+    }
+});
+
 // Generate a random inkblot
 function generateInkblot() {
     // Clear canvas
@@ -67,6 +79,9 @@ function generateInkblot() {
     // Hide result when generating new inkblot
     result.classList.add('hidden');
     userInterpretation.value = '';
+
+    // Restore placeholder when generating new inkblot
+    userInterpretation.placeholder = 'Tell me... what do you see?';
 
     // Function to generate the left half of the inkblot
     function generateLeftHalf() {
