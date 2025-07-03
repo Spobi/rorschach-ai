@@ -25,7 +25,7 @@ app.post('/analyze', async (req, res) => {
                 max_tokens: 300,
                 messages: [{
                     role: 'user',
-                    content: `You are a psychologist analyzing a Rorschach test response. The person saw: "${text}". Give a brief, insightful, and friendly psychological interpretation of what this might reveal about their personality, mindset, or perspective. Keep it positive and interesting, around 2-3 sentences.`
+                    content: `You are a psychologist analyzing a Rorschach test response. The person saw: "${text}". Give a brief, insightful, and intense psychological interpretation of what this might reveal about their personality, mindset, or perspective. Try to make specific guesses about the person based on their response and be hyper specific. Keep it intense and heady and interesting, around 2-3 sentences.`
                 }]
             })
         });
